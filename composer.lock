@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f6eb966c2355585b2fc34e2fd9bdfcf",
-    "packages": [],
+    "hash": "ad2024c046deb3fe2f033cf41bb56b25",
+    "packages": [
+        {
+            "name": "php-ddd/utils",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-ddd/utils.git",
+                "reference": "ed98eb8f9e34150454a65a4b462ee3e4d13ee18e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-ddd/utils/zipball/ed98eb8f9e34150454a65a4b462ee3e4d13ee18e",
+                "reference": "ed98eb8f9e34150454a65a4b462ee3e4d13ee18e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "^1.8.1",
+                "phploc/phploc": "^2.1.3",
+                "phpmd/phpmd": "^2.2.3",
+                "phpunit/phpunit": "^4.7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpDDD\\Utils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julien Dufresne"
+                }
+            ],
+            "description": "Provide some utility classes that could not belong to a specific repository.",
+            "time": "2015-08-09 21:42:13"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
