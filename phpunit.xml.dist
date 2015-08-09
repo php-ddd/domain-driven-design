@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="vendor/autoload.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         strict="true"
+         colors="true"
+         verbose="true">
+  <testsuites>
+    <testsuite name="php-ddd/domain-driven-design">
+      <directory suffix="Test.php">tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <logging>
+    <log type="coverage-html" target="build/coverage" title="php-ddd/domain-driven-design"
+         charset="UTF-8" yui="true" highlight="true"
+         lowUpperBound="50" highLowerBound="90"/>
+    <log type="coverage-clover" target="build/logs/clover.xml"/>
+    <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
+  </logging>
+
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">src</directory>
+    </whitelist>
+  </filter>
+</phpunit>
