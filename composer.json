@@ -7,7 +7,7 @@
         "psr-4": {"PhpDDD\\DomainDrivenDesign\\": "src"}
     },
     "autoload-dev": {
-        "psr-4": {"PhpDDD\\DomainDrivenDesignTests\\": "tests"}
+        "psr-4": {"PhpDDD\\DomainDrivenDesign\\Tests\\": "tests"}
     },
     "authors": [
         {
@@ -15,7 +15,8 @@
         }
     ],
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "php-ddd/utils": "^1.1.0"
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "^1.8.1",

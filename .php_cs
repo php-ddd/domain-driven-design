@@ -5,6 +5,7 @@ return Symfony\CS\Config\Config::create()
     // and extra fixers:
     ->fixers(
         [
+            '-psr0',
             '-phpdoc_no_empty_return',
             'align_double_arrow',
             'align_equals',
@@ -15,6 +16,6 @@ return Symfony\CS\Config\Config::create()
         ]
     )
     ->finder(
-        Symfony\CS\Finder\DefaultFinder::create()->in([__DIR__ . '/src', __DIR__ . '/Tests'])
+        Symfony\CS\Finder\DefaultFinder::create()->in([__DIR__ . '/src', __DIR__ . '/tests'])
     )
     ->setUsingCache(true);
