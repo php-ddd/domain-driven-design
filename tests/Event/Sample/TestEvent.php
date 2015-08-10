@@ -8,7 +8,7 @@ use PhpDDD\DomainDrivenDesign\Event\AbstractEvent;
  * This is a basic event. It contains three properties:
  * - myProperty
  * - author (inherited from the AbstractEvent class)
- * - date (inherited from the AbstractEvent class)
+ * - date (inherited from the AbstractEvent class).
  *
  * An event should be POPO (plain old PHP object)
  *
