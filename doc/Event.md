@@ -1,4 +1,4 @@
-# Eventing System
+# Event System
 
 As Greg Young (and many others) says: "An event is something that happened, it's in the past".
 
@@ -17,8 +17,8 @@ The main advantages over classic development is that everything is bound to some
 ## How it works
 
 1. Configuring the EventDispatcher
-  1. Create an Event class (extending [`PhpDDD\DomainDrivenDesign\Event\AbstractEvent`](/src/Event/AbstractEvent.php)) - [example](tests/Event/Sample/TestEvent.php)
-  2. Create an EventSubscriber (implementing [`PhpDDD\DomainDrivenDesign\Event\EventSubscriberInterface`](/src/Event/EventSubscriberInterface.php)) - [example](tests/Event/Sample/TestEventSubscriber.php)
+  1. Create an Event class (extending [`PhpDDD\DomainDrivenDesign\Event\AbstractEvent`](/src/Event/AbstractEvent.php)) - [example](/tests/Event/Sample/TestEvent.php)
+  2. Create an EventSubscriber (implementing [`PhpDDD\DomainDrivenDesign\Event\EventSubscriberInterface`](/src/Event/EventSubscriberInterface.php)) - [example](/tests/Event/Sample/TestEventSubscriber.php)
   3. Attach your EventSubscriber to the EventDispatcher (you may need to instantiate it)
 2. Publishing
   1. instantiate your Event
