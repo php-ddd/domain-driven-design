@@ -37,10 +37,8 @@ filter:
         - vendor/*
 
 tools:
-    external_code_coverage: true
     php_analyzer: true
     php_changetracking: true
-    php_code_coverage: true
     php_code_sniffer:
         config:
             standard:         "PSR2"
