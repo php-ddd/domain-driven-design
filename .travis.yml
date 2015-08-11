@@ -19,7 +19,9 @@ install:
   - composer install --no-interaction --prefer-dist
 
 script:
-  - phpunit --coverage-clover=coverage.clover
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
-  - rm -v ./vendor/autoload.php ./vendor/composer/!(installed.json)
+  - phpunit
+  - mkdir -p .autoload/composer && mv -v ./vendor/autoload.php ./.autoload/autoload.php && mv -v ./vendor/composer/!(installed.json) ./.autoload/composer
+
+after_script:
+  - mv -v ./.autoload/autoload.php ./vendor/autoload.php && mv -v ./.autoload/composer/* ./vendor/composer && rm -r .autoload
+  - php vendor/bin/coveralls -v
