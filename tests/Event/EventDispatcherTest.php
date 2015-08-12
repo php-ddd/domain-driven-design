@@ -48,7 +48,7 @@ final class EventDispatcherTest extends PHPUnit_Framework_TestCase
 
     public function testAddSubscriber()
     {
-        $this->dispatcher->addSubscriber(new TestEventSubscriber());
+        $this->dispatcher->subscribe(new TestEventSubscriber());
         $this->assertCount(2, $this->dispatcher->getListeners($this->event));
         $this->assertCount(2, $this->dispatcher->getListeners($this->event, true));
     }
@@ -56,7 +56,7 @@ final class EventDispatcherTest extends PHPUnit_Framework_TestCase
     public function testPublish()
     {
         $subscriber = new TestEventSubscriber();
-        $this->dispatcher->addSubscriber($subscriber);
+        $this->dispatcher->subscribe($subscriber);
 
         $this->dispatcher->publish($this->event);
         $this->assertEquals(2, $subscriber->nbPreFooCalled);
@@ -65,7 +65,7 @@ final class EventDispatcherTest extends PHPUnit_Framework_TestCase
     public function testAsynchronousPublish()
     {
         $subscriber = new TestEventSubscriber();
-        $this->dispatcher->addSubscriber($subscriber);
+        $this->dispatcher->subscribe($subscriber);
 
         $this->dispatcher->publish($this->event, true);
         $this->assertEquals(1, $subscriber->nbPreFooCalled);

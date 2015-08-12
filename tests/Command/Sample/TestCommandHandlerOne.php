@@ -3,6 +3,7 @@
 namespace PhpDDD\DomainDrivenDesign\Tests\Command\Sample;
 
 use PhpDDD\DomainDrivenDesign\Command\CommandHandlerInterface;
+use PhpDDD\DomainDrivenDesign\Tests\Domain\Sample\TestAggregateRoot;
 
 /**
  *
@@ -50,11 +51,19 @@ final class TestCommandHandlerOne implements CommandHandlerInterface
     }
 
     /**
+     * @param TestCommandOne $command
      *
+     * @return TestCommandOne
      */
-    public static function testFirstCommand()
+    public static function testFirstCommand(TestCommandOne $command)
     {
         self::$firstCommandCalled = true;
+        $aggregate                = new TestAggregateRoot();
+        $aggregate->run();
+
+        $command->addAggregateRoot($aggregate);
+
+        return $command;
     }
 
     /**
