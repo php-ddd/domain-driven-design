@@ -4,7 +4,7 @@ namespace PhpDDD\DomainDrivenDesign\Event;
 
 use PhpDDD\Utils\ClassUtils;
 
-final class EventDispatcher
+final class EventDispatcher implements EventDispatcherInterface
 {
     /**
      * @var EventListener[]
@@ -29,7 +29,7 @@ final class EventDispatcher
     /**
      * @param EventSubscriberInterface $subscriber
      */
-    public function addSubscriber(EventSubscriberInterface $subscriber)
+    public function subscribe(EventSubscriberInterface $subscriber)
     {
         foreach ($subscriber->getSubscribedEvents() as $subscribedEvent) {
             $subscribedEvent->setSubscriber($subscriber);
