@@ -1,5 +1,31 @@
 # Change Log
 
+## [Unreleased](https://github.com/php-ddd/domain-driven-design/tree/HEAD)
+
+[Full Changelog](https://github.com/php-ddd/domain-driven-design/compare/v0.4.0...HEAD)
+
+**Implemented enhancements:**
+
+- Command system [\#7](https://github.com/php-ddd/domain-driven-design/issues/7)
+
+## [v0.4.0](https://github.com/php-ddd/domain-driven-design/tree/v0.4.0) (2015-08-12)
+[Full Changelog](https://github.com/php-ddd/domain-driven-design/compare/v0.3.0...v0.4.0)
+
+**Merged pull requests:**
+
+- implementation of the command system [\#8](https://github.com/php-ddd/domain-driven-design/pull/8) ([juliendufresne](https://github.com/juliendufresne))
+
+## [v0.3.0](https://github.com/php-ddd/domain-driven-design/tree/v0.3.0) (2015-08-11)
+[Full Changelog](https://github.com/php-ddd/domain-driven-design/compare/v0.2.0...v0.3.0)
+
+**Implemented enhancements:**
+
+- Add more coninuous integration tools [\#5](https://github.com/php-ddd/domain-driven-design/issues/5)
+
+**Merged pull requests:**
+
+- Adds Continuous integration tools [\#6](https://github.com/php-ddd/domain-driven-design/pull/6) ([juliendufresne](https://github.com/juliendufresne))
+
 ## [v0.2.0](https://github.com/php-ddd/domain-driven-design/tree/v0.2.0) (2015-08-10)
 [Full Changelog](https://github.com/php-ddd/domain-driven-design/compare/v0.1.0...v0.2.0)
 
