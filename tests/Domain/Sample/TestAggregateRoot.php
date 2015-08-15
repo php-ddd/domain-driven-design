@@ -63,4 +63,14 @@ final class TestAggregateRoot extends AbstractAggregateRoot
 
         return $event;
     }
+
+    /**
+     * Get the unique identifier of this aggregate root.
+     *
+     * @return mixed
+     */
+    public function getId()
+    {
+        return mt_rand();
+    }
 }

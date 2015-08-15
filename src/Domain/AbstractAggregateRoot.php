@@ -15,6 +15,13 @@ abstract class AbstractAggregateRoot
      */
     private $events = [];
 
+    /**
+     * Get the unique identifier of this aggregate root.
+     *
+     * @return mixed
+     */
+    abstract public function getId();
+
     public function pullEvents()
     {
         $events       = $this->events;
@@ -28,6 +35,7 @@ abstract class AbstractAggregateRoot
      */
     protected function apply(AbstractEvent $event)
     {
+        $event->aggregateRoot = $this;
         $this->executeEvent($event);
         $this->events[] = $event;
     }

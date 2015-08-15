@@ -3,15 +3,24 @@
 namespace PhpDDD\DomainDrivenDesign\Event;
 
 use DateTime;
+use PhpDDD\DomainDrivenDesign\Domain\AbstractAggregateRoot;
 use PhpDDD\DomainDrivenDesign\User\Author;
 use PhpDDD\Utils\PopulatePropertiesTrait;
+use Serializable;
 
 /**
  * Base class for every event.
  */
-abstract class AbstractEvent
+abstract class AbstractEvent implements Serializable
 {
     use PopulatePropertiesTrait;
+
+    /**
+     * Get the aggregate root from which is the event is triggered.
+     *
+     * @var AbstractAggregateRoot
+     */
+    public $aggregateRoot;
 
     /**
      * @var Author
@@ -30,7 +39,8 @@ abstract class AbstractEvent
     {
         // Enforce the date property to be set.
         // Should not rely on the one given by the user.
-        $data['date'] = new DateTime();
+        $data['date']   = new DateTime();
+        $data['author'] = isset($data['author']) ? $data['author'] : Author::robot();
         $this->populate($data);
     }
 }

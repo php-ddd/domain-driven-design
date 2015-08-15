@@ -9,6 +9,7 @@ To ease its development, this framework requires PHP5.5+
 - Command System - [doc](doc/Command.md)
 - Basic domain tools - [doc](doc/Domain.md)
 - Event system (EventDispatcher, Listener) - [doc](doc/Event.md)
+- Event Log - [doc](doc/EventLog.md)
 
 ## Project Status
 
