@@ -1,11 +1,24 @@
 # Change Log
 
+## [v0.6.0](https://github.com/php-ddd/domain-driven-design/tree/v0.6.0) (2015-08-15)
+
+[Full Changelog](https://github.com/php-ddd/domain-driven-design/compare/v0.5.0...v0.6.0)
+
+**Implemented enhancements:**
+
+- Add event logging capability [\#11](https://github.com/php-ddd/domain-driven-design/issues/11)
+
+**Merged pull requests:**
+
+- Event logging capability [\#12](https://github.com/php-ddd/domain-driven-design/pull/12) ([juliendufresne](https://github.com/juliendufresne))
+
 ## [v0.5.0](https://github.com/php-ddd/domain-driven-design/tree/v0.5.0) (2015-08-12)
 [Full Changelog](https://github.com/php-ddd/domain-driven-design/compare/v0.4.0...v0.5.0)
 
 **Implemented enhancements:**
 
 - Link between Command and Event [\#9](https://github.com/php-ddd/domain-driven-design/issues/9)
+- Command system [\#7](https://github.com/php-ddd/domain-driven-design/issues/7)
 
 **Merged pull requests:**
 
@@ -13,10 +26,6 @@
 
 ## [v0.4.0](https://github.com/php-ddd/domain-driven-design/tree/v0.4.0) (2015-08-12)
 [Full Changelog](https://github.com/php-ddd/domain-driven-design/compare/v0.3.0...v0.4.0)
-
-**Implemented enhancements:**
-
-- Command system [\#7](https://github.com/php-ddd/domain-driven-design/issues/7)
 
 **Merged pull requests:**
 
