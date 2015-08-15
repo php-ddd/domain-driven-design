@@ -7,6 +7,7 @@ return Symfony\CS\Config\Config::create()
         [
             '-psr0',
             '-phpdoc_no_empty_return',
+            '-unalign_equals',
             'align_double_arrow',
             'align_equals',
             'multiline_spaces_before_semicolon',

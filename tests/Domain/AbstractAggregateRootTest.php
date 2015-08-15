@@ -22,7 +22,8 @@ final class AbstractAggregateRootTest extends PHPUnit_Framework_TestCase
 
         $events = $aggregate->pullEvents();
         $this->assertCount(1, $events);
-        $this->assertEquals([new TestEvent()], $events);
+        $event = array_shift($events);
+        $this->assertEquals(TestEvent::class, get_class($event));
         $this->assertEmpty($aggregate->pullEvents());
     }
 

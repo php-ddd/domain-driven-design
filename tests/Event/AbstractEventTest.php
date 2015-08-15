@@ -17,7 +17,7 @@ final class AbstractEventTest extends PHPUnit_Framework_TestCase
     public function testEmptyConstructor()
     {
         $mock = $this->getMockForAbstractEvent([]);
-        $this->assertNull($mock->author);
+        $this->assertEquals(Author::robot(), $mock->author);
     }
 
     public function testConstructorWithAuthor()

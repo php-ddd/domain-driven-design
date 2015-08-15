@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "php-ddd/utils": "^1.1.0"
+        "php-ddd/utils": "^1.2.0"
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "^1.8.1",
