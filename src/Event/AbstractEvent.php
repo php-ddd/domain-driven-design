@@ -3,6 +3,7 @@
 namespace PhpDDD\DomainDrivenDesign\Event;
 
 use DateTime;
+use PhpDDD\DomainDrivenDesign\Command\AbstractCommand;
 use PhpDDD\DomainDrivenDesign\Domain\AbstractAggregateRoot;
 use PhpDDD\DomainDrivenDesign\User\Author;
 use PhpDDD\Utils\PopulatePropertiesTrait;
@@ -31,6 +32,13 @@ abstract class AbstractEvent implements Serializable
      * @var DateTime
      */
     public $date;
+
+    /**
+     * Get commands to execute after dispatch event.
+     *
+     * @var AbstractCommand[]
+     */
+    public $commands = [];
 
     /**
      * @param array $data The list of properties values. The key represent the property name.

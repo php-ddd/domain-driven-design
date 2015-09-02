@@ -51,7 +51,7 @@ final class EventListener
     public static function validateEventClassName($eventClassName)
     {
         if (null !== $eventClassName && !is_string($eventClassName)) {
-            throw InvalidArgumentException::wrongType('eventClassName', $eventClassName, 'null or sting');
+            throw InvalidArgumentException::wrongType('eventClassName', $eventClassName, 'null or string');
         }
     }
 
@@ -61,7 +61,7 @@ final class EventListener
     public static function validateMethod($method)
     {
         if (!is_string($method) && !is_callable($method)) {
-            throw InvalidArgumentException::wrongType('method', $method, 'callable or sting');
+            throw InvalidArgumentException::wrongType('method', $method, 'callable or string');
         }
     }
 

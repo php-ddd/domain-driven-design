@@ -76,7 +76,12 @@ final class CommandEventDispatcher implements CommandDispatcherInterface, EventD
      */
     public function publish(AbstractEvent $event, $asynchronous = false)
     {
-        return $this->eventDispatcher->publish($event, $asynchronous);
+        $this->eventDispatcher->publish($event, $asynchronous);
+        foreach ($event->commands as $command) {
+            $this->handle($command);
+        }
+
+        return $event;
     }
 
     /**
